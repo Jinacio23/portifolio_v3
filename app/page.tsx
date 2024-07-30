@@ -12,61 +12,60 @@ import FooterLinks from "./components/FooterLinks";
 export default function Home() {
   return (
     <>
-      <header>
-
-        <nav>
-
-          <button className="menu" disabled>
-            <Menu />
-          </button>
-
-          <ul>
-            <li>Home</li>
-            <li>Sobre</li>
-            <li>Projetos</li>
-            <li>Serviços</li>
-            <li>Experiência/Conhecimentos</li>
-            <li>Contatos</li>
-          </ul>
-
-        </nav>
-
+      <header className="bg-[#5a5ab2] max-h-10 flex items-center ">
+        <button className="menu m-1.5" disabled>
+          <Menu
+            color="#fff"
+          />
+        </button>
       </header>
 
+      <nav className="bg-[#393994] m-1 p-2 rounded-xl" hidden>{/*hidden -> esconde nav */}
 
-      <main>
+        <ul className="flex flex-col items-center gap-2">
+          <a href="#" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Home</a>
+          <a href="#" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Sobre</a>
+          <a href="#" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Projetos</a>
+          <a href="#" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Serviços</a>
+          <a href="#" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Experiência/Conhecimentos</a>
+          <a href="#" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Contatos</a>
+        </ul>
 
-        <section className="home">
+      </nav>
+
+      <main className="m-4 mt-12">
+
+        <section className="home flex flex-col items-center gap-8 mb-10">
           <Image
             src={Perfil}
             alt="Perfil"
-            height={80}
-            width={80}
+            height={160}
+            width={160}
           />
-          <div className="conteiner">
+          <div className="conteiner flex flex-col  items-center gap-2">
             <p>Olá, me chamo</p>
-            <p>José Inácio</p>
+            <p className="text-3xl">José Inácio</p>
             <p>Desenvolvedor web e Freelancer</p>
           </div>
-          <div className="utils">
-            <button>Saiba mais</button>
 
-            <Image
-              src={LinkedinImg}
-              alt="Linkedin"
-              height={30}
-              width={30}
-            />
-            <Image
-              src={InstagramImg}
-              alt="Instagram"
-              height={30}
-              width={30}
-            />
+          <div className="utils flex gap-6">
+            <button className="bg-[#5a5ab2] p-2 px-4 rounded-full text-sm shadow-lg shadow-black/40">Saiba mais</button>
 
-            <div>
-
+            <div className="flex gap-2">
+              <Image
+                src={LinkedinImg}
+                alt="Linkedin"
+                height={20}
+                width={20}
+              />
+              <Image
+                src={InstagramImg}
+                alt="Instagram"
+                height={20}
+                width={20}
+              />
             </div>
+
           </div>
         </section>
 
