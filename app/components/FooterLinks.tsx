@@ -1,7 +1,7 @@
 import Image from "next/image"
-import Linkedin from "../../public/icon/linkedin.svg"
-import Github from "../../public/icon/github.svg"
-import Instagram from "../../public/icon/instagram.svg"
+import Linkedin from "@/public/icon/linkedin.svg"
+import Github from "@/public/icon/github.svg"
+import Instagram from "@/public/icon/instagram.svg"
 
 export default function FooterLinks() {
     return (

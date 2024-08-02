@@ -5,9 +5,13 @@ import LinkedinImg from "../public/icon/linkedin.svg"
 import InstagramImg from "../public/icon/instagram.svg"
 import whatsapp from "../public/icon/whatsapp.svg"
 
-import ProjectCard from "./components/ProjectCard";
+
+import ProjectCard1 from "./components/ProjectCard1";
+import ProjectCard2 from "./components/ProjectCard2";
 import CarrosselExp from "./components/CarrosselExp";
 import FooterLinks from "./components/FooterLinks";
+import BackgroundDesk from "./components/BackgroundDesk";
+import BackgroundMob from "./components/BackgroundMob";
 
 export default function Home() {
   return (
@@ -43,62 +47,74 @@ export default function Home() {
             width={160}
           />
           <div className="conteiner flex flex-col  items-center gap-2">
-            <p>Olá, me chamo</p>
+            <p className="font-light">Olá, me chamo</p>
             <p className="text-3xl">José Inácio</p>
             <p>Desenvolvedor web e Freelancer</p>
           </div>
 
           <div className="utils flex gap-6">
-            <button className="bg-[#5a5ab2] p-2 px-4 rounded-full text-sm shadow-lg shadow-black/40">Saiba mais</button>
+            <button className="bg-[#5a5ab2] p-2 px-4 rounded-full text-sm shadow-lg shadow-black/40 font-light">Saiba mais</button>
 
-            <div className="flex gap-2">
+            <div className="flex items-center gap-2">
+              <a href="#">
               <Image
                 src={LinkedinImg}
                 alt="Linkedin"
                 height={20}
                 width={20}
               />
+              </a>
+              <a href="#">
               <Image
                 src={InstagramImg}
                 alt="Instagram"
                 height={20}
                 width={20}
               />
+              </a>
             </div>
 
           </div>
         </section>
 
-        <section className="sobre">
-          <img src="#" alt="exibir em desktop/ mudar este alt" />
-          <div>
-            <h2>Sobre mim</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, ullam vitae nam dolore, non fugit quae explicabo placeat sed possimus necessitatibus pariatur suscipit autem quisquam ut deserunt quibusdam ratione totam.</p>
+        <section className="sobre mb-10">
+          <img src="#" alt="exibir em desktop/ mudar este alt" hidden/>
+          <div className="flex flex-col items-center">
+            <h2 className="text-2xl mb-4">Sobre mim</h2>
+            <p className="text-center text-sm px-2 font-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, ullam vitae nam dolore, non fugit quae explicabo placeat sed possimus necessitatibus pariatur suscipit autem quisquam ut deserunt quibusdam ratione totam.</p>
           </div>
         </section>
 
-        <section className="projetos">
-          <h2>Projetos</h2>
-          <ProjectCard />
+        <section className="projetos flex flex-col items center mb-10">
+          <h2 className="text-2xl mb-6 text-center">Projetos</h2>
+          <ProjectCard1 />
+          <ProjectCard2 />
 
         </section>
 
-        <section className="services">
-          <h2>Serviços</h2>
-          <div className="cardDesktop">
-            {/* background com imagem do card, pos. absolute para os textos */}
-            <h3>Desenvolvedor Web</h3>
-            <p>Um pouco sobre...</p>
+        <section className="services flex flex-col items-center mb-10">
+          <h2 className="text-2xl text-center mb-8">Serviços</h2>
+          <div className="cardService relative mb-8">
+            <BackgroundDesk />
+            <div className="absolute top-6 right-5 text-center text-wrap w-36">
+
+            <h3 className="text-black text-ms font-medium">Desenvolvedor Web</h3>
+            </div>
+            <p className="absolute text-wrap top-28 right-3 w-64 text-sm font-light p-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis dolores consequuntur modi consequatur aspernatur dolore iusto aliquam dolorem facere, quae, aut ex sequi accusantium numquam ducimus eius maxime architecto ipsam?</p>
           </div>
-          <div className="cardMobile">
-            {/* background com imagem do card, pos. absolute para os textos */}
-            <h3>Desenvolvedor Mobile</h3>
-            <p>Um pouco sobre...</p>
+
+          <div className="cardService relative">
+          <BackgroundMob />
+            <div className="absolute top-6 right-5 text-center text-wrap w-36">
+
+            <h3 className="text-black text-ms font-medium">Desenvolvedor Mobile</h3>
+            </div>
+            <p className="absolute text-wrap top-28 right-3 w-64 text-sm font-light p-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis dolores consequuntur modi consequatur aspernatur dolore iusto aliquam dolorem facere, quae, aut ex sequi accusantium numquam ducimus eius maxime architecto ipsam?</p>
           </div>
         </section>
 
-        <section className="experiencia">
-          <h2>Experiência</h2>
+        <section className="experiencia mb-10">
+          <h2 className="text-2xl text-center mb-4">Experiência</h2>
           <CarrosselExp />
 
         </section>
@@ -106,7 +122,7 @@ export default function Home() {
       </main>
 
 
-      <footer>
+      <footer className="bg-[#48489d]">
 
         <section className="contatos">
           <h2>Contato</h2>
