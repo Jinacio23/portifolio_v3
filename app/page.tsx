@@ -5,13 +5,14 @@ import LinkedinImg from "../public/icon/linkedin.svg"
 import InstagramImg from "../public/icon/instagram.svg"
 import whatsapp from "../public/icon/whatsapp.svg"
 
-
 import ProjectCard1 from "./components/ProjectCard1";
 import ProjectCard2 from "./components/ProjectCard2";
 import CarrosselExp from "./components/CarrosselExp";
 import FooterLinks from "./components/FooterLinks";
 import BackgroundDesk from "./components/BackgroundDesk";
 import BackgroundMob from "./components/BackgroundMob";
+import SendEmail from "./components/SendEmail";
+import LoadCV from "./components/LoadCV";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
         </button>
       </header>
 
-      <nav className="bg-[#393994] m-1 p-2 rounded-xl" hidden>{/*hidden -> esconde nav */}
+      <nav className="bg-[#393994] m-1 p-2 rounded-xl hidden">
 
         <ul className="flex flex-col items-center gap-2">
           <a href="#" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Home</a>
@@ -122,37 +123,39 @@ export default function Home() {
       </main>
 
 
-      <footer className="bg-[#48489d]">
+      <footer className="bg-[#48489d] rounded-t-3xl p-4">
 
-        <section className="contatos">
-          <h2>Contato</h2>
-          <p>Entre em contato</p>
-          <p>Caso queira fazer um orçamento ou apenas conversar, seguem:</p>
+        <section className="contatos flex flex-col">
+          <h2 className="text-2xl text-center mb-4">Contato</h2>
+          <p>Entre em contato!</p>
+          <p className="text-sm w-60 font-light">Caso queira fazer um orçamento ou apenas conversar, seguem:</p>
 
-          <div>
+          <div className="flex items-center gap-2 py-4">
             <Image
               src={whatsapp}
               alt="Whatsapp"
-              height={30}
-              width={30}
+              height={25}
+              width={25}
             />
-            <p>(61) 9 9457-1454</p>
+            <p className="text-sm">(61) 9 9457-1454</p>
           </div>
 
-          <button>Enviar Email</button>
+          <button className="bg-[#393994] text-xs p-2 w-28 rounded-xl mb-3 self-end font-medium" disabled>Enviar Email</button>
         </section>
 
-        <hr />
-        <div>
-          <button>Meu Currículo</button>
+        <hr/>
+        <div className="flex justify-between items-center">
+          <button className="bg-[#393994] text-xs p-2 w-28 rounded-xl mb-3 font-medium mt-3" disabled>Meu Currículo</button>
           <div>
             <FooterLinks />
           </div>
         </div>
 
-        <p>© 2024 por José Inácio. Todos os direitos reservados.</p>
+        <p className="text-xs text-center">© 2024 por José Inácio. Todos os direitos reservados.</p>
       </footer>
 
+      <SendEmail />
+      <LoadCV />
     </>
   );
 }

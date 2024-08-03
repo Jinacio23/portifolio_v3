@@ -5,25 +5,31 @@ import Instagram from "@/public/icon/instagram.svg"
 
 export default function FooterLinks() {
     return (
-        <div>
+        <div className="flex gap-6">
+            <a href="#">
             <Image
                 src={Linkedin}
                 alt="External Link"
-                height={30}
-                width={30}
+                height={25}
+                width={25}
             />
+            </a>
+            <a href="#">
             <Image
                 src={Github}
                 alt="External Link"
-                height={30}
-                width={30}
+                height={25}
+                width={25}
             />
+            </a>
+            <a href="#">
             <Image
                 src={Instagram}
                 alt="External Link"
-                height={30}
-                width={30}
+                height={25}
+                width={25}
             />
+            </a>
             
         </div>
     )
