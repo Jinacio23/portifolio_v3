@@ -5,10 +5,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     color: #fff;
     font-family: "Poppins", sans-serif;
 }
+
 body{
     background-color: #2E2E6F;
 }

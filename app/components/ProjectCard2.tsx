@@ -31,7 +31,7 @@ export default function ProjectCard2() {
                                 width={20}
                             />
                         </a>
-                        <a href="#">
+                        <a href="https://github.com/Jinacio23">
                             <Image
                                 src={GithubImg}
                                 alt="Github"
