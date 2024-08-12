@@ -1,7 +1,7 @@
 'use client'
 import { Menu } from "lucide-react";
 import Image from "next/image";
-import Perfil from "../public/icon/perfil.svg"
+import Perfil from "../public/img/perfil.png"
 import LinkedinImg from "../public/icon/linkedin.svg"
 import InstagramImg from "../public/icon/instagram.svg"
 import whatsapp from "../public/icon/whatsapp.svg"
@@ -27,11 +27,12 @@ export default function Home() {
 
   return (
     <>
-      <header className="bg-[#5a5ab2] max-h-10 flex items-center ">
+      <header id="menu" className="bg-[#5a5ab2] max-h-12 flex items-center z-50 fixed top-0 w-full">
         <Button
           title={
             <Menu
               color="#fff"
+              size={30}
             />
           }
           className="menu m-1.5"
@@ -39,7 +40,7 @@ export default function Home() {
         />
       </header>
 
-      <nav id="nav" className="bg-[#393994] m-1 p-2 rounded-xl hidden">
+      <nav id="nav" className="bg-[#393994] fixed w-full m-1 p-2 rounded-xl z-50 hidden">
 
         <ul className="flex flex-col items-center gap-2">
           <a href="#home" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Home</a>
@@ -58,8 +59,8 @@ export default function Home() {
           <Image
             src={Perfil}
             alt="Perfil"
-            height={160}
-            width={160}
+            height={220}
+            width={220}
           />
           <div className="conteiner flex flex-col  items-center gap-2">
             <p className="font-light">Olá, me chamo</p>
@@ -112,7 +113,7 @@ export default function Home() {
 
         <section id="services" className="flex flex-col items-center mb-10">
           <h2 className="text-2xl text-center mb-8">Serviços</h2>
-          <div className="cardService relative mb-8">
+          <div className="cardService relative mb-8 ">
             <BackgroundDesk />
             <div className="absolute top-6 right-5 text-center text-wrap w-36">
 

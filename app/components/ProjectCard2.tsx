@@ -40,7 +40,7 @@ export default function ProjectCard2() {
                             />
                         </a>
                     </div>
-                    <div className="tools flex gap-1">
+                    <div className="flex gap-1">
 
                         <Image
                             src={html_img}

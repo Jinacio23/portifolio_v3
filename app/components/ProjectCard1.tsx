@@ -5,9 +5,13 @@ import html_img from "../../public/icon/html_icon.svg"
 import css_img from "../../public/icon/css_icon.svg"
 import js_img from "../../public/icon/js_icon.svg"
 import imgTest from "../../public/img/WordleTest.png"
+import IconSet from "./IconSet"
+
 
 
 export default function ProjectCard1() {
+    let icons = ['html', 'css', 'js']
+
     return (
         <article className="bg-[#48489d] flex flex-row-reverse p-2 rounded-2xl gap-3 mb-5">
             <Image
@@ -41,6 +45,10 @@ export default function ProjectCard1() {
                         </a>
                     </div>
                     <div className="tools flex gap-1">
+
+                        {/* <IconSet 
+                        icons={icons}
+                        /> */}
 
                         <Image
                             src={html_img}
