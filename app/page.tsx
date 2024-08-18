@@ -6,8 +6,7 @@ import LinkedinImg from "../public/icon/linkedin.svg"
 import InstagramImg from "../public/icon/instagram.svg"
 import whatsapp from "../public/icon/whatsapp.svg"
 
-import ProjectCard1 from "./components/ProjectCard1";
-import ProjectCard2 from "./components/ProjectCard2";
+import ProjectCard from "./components/ProjectCard";
 import CarrosselExp from "./components/CarrosselExp";
 import FooterLinks from "./components/FooterLinks";
 import BackgroundDesk from "./components/BackgroundDesk";
@@ -106,9 +105,9 @@ export default function Home() {
 
         <section id="projetos" className="flex flex-col items center mb-10">
           <h2 className="text-2xl mb-6 text-center">Projetos</h2>
-          <ProjectCard1 />
-          <ProjectCard2 />
-
+          <ProjectCard img="wordle" title="Projeto 1" description="Lorem por enquanto" icons={["html","css","js"]} size={20}/>
+          <ProjectCard img="wordle" title="Projeto 1" description="Lorem por enquanto" icons={["html","css","js"]} size={20} inverse={true}/>
+          
         </section>
 
         <section id="services" className="flex flex-col items-center mb-10">
