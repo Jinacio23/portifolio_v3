@@ -21,7 +21,7 @@ const config: Config = {
         }
       },
       animation: {
-        carrossel: 'carrossel 30s linear infinite',
+        carrossel: 'carrossel 26s linear infinite',
       }
     },
   },

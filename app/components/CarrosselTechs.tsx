@@ -8,7 +8,7 @@ interface Props{
 export default function CarrosselTechs({icons, size}: Props) {
     return (
         
-            <div className="min-w-full justify-between flex px-6 p-2 relative animate-carrossel">
+            <div className="min-w-full justify-between flex px-5 p-2 relative animate-carrossel">
             {
                 icons.map((icon) => (
                     <Image
