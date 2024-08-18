@@ -17,6 +17,7 @@ export default function ProjectCard({ img, title, description, icons, size, inve
     return (
         <article className={`bg-[#48489d] ${inverse ? '' : 'flex-row-reverse'} flex  p-2 rounded-2xl gap-3 mb-5`}>
             <Image
+                key={img}
                 src={`/img/${img}.png`}
                 alt="imag do projeto"
                 height={180}
@@ -50,6 +51,7 @@ export default function ProjectCard({ img, title, description, icons, size, inve
                         {
                             icons.map((item) => (
                                 <Image 
+                                key={item}
                                 src={`/icon/${item}.svg`}
                                 alt={item}
                                 height={size}
