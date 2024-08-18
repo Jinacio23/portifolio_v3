@@ -7,7 +7,7 @@ import InstagramImg from "../public/icon/instagram.svg"
 import whatsapp from "../public/icon/whatsapp.svg"
 
 import ProjectCard from "./components/ProjectCard";
-import CarrosselExp from "./components/CarrosselExp";
+import CarrosselTechs from "./components/CarrosselTechs";
 import FooterLinks from "./components/FooterLinks";
 import BackgroundDesk from "./components/BackgroundDesk";
 import BackgroundMob from "./components/BackgroundMob";
@@ -45,8 +45,8 @@ export default function Home() {
           <a href="#home" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Home</a>
           <a href="#sobre" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Sobre</a>
           <a href="#projetos" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Projetos</a>
-          <a href="#services" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Serviços</a>
-          <a href="#experiencia" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Experiência</a>
+          {/* <a href="#services" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Serviços</a> */}
+          <a href="#tecnologias" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Tecnologias</a>
           <a href="#contatos" className="duration-300 delay-100 hover:bg-[#48489d] w-full flex items-center justify-center hover:p-1 rounded-xl">Contatos</a>
         </ul>
 
@@ -105,12 +105,12 @@ export default function Home() {
 
         <section id="projetos" className="flex flex-col items center mb-10">
           <h2 className="text-2xl mb-6 text-center">Projetos</h2>
-          <ProjectCard img="wordle" title="Projeto 1" description="Lorem por enquanto" icons={["html","css","js"]} size={20}/>
-          <ProjectCard img="wordle" title="Projeto 1" description="Lorem por enquanto" icons={["html","css","js"]} size={20} inverse={true}/>
-          
+          <ProjectCard img="wordle" title="Projeto 1" description="Lorem por enquanto" icons={["html", "css", "js"]} size={20} />
+          <ProjectCard img="wordle" title="Projeto 1" description="Lorem por enquanto" icons={["html", "css", "js"]} size={20} inverse={true} />
+
         </section>
 
-        <section id="services" className="flex flex-col items-center mb-10">
+        <section id="services" className="flex flex-col items-center mb-10 hidden">
           <h2 className="text-2xl text-center mb-8">Serviços</h2>
           <div className="cardService relative mb-8 ">
             <BackgroundDesk />
@@ -131,14 +131,17 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="experiencia" className="mb-10">
-          <h2 className="text-2xl text-center mb-4">Experiência</h2>
-          <CarrosselExp />
-
+        <section id="tecnologias" className="mb-10">
+          <h2 className="text-2xl text-center mb-4">Tecnologias</h2>
+          <div className="relative">
+            <div className="bg-[#393994] h-12 flex justify-between rounded-2xl overflow-hidden">
+              <CarrosselTechs icons={["js", "ts", "react", "php", "css", "tailwind", "mysql"]} size={28} />
+              <CarrosselTechs icons={["js", "ts", "react", "php", "css", "tailwind", "mysql"]} size={28} />
+            </div>
+            <div className="bg-gradient-to-r from-[#202054] from-0% via-transparent to-[#202054] h-12 w-full rounded-2xl absolute top-0"></div>
+          </div>
         </section>
-
       </main>
-
 
       <footer className="bg-[#48489d] rounded-t-3xl p-4">
 
@@ -157,7 +160,7 @@ export default function Home() {
             <p className="text-sm">(61) 9 9457-1454</p>
           </div>
 
-          <button className="bg-[#393994] text-xs p-2 w-28 rounded-xl mb-3 self-end font-medium" disabled>Enviar Email</button>
+          <button className="bg-[#393994] text-xs text-[#777] p-2 w-28 rounded-xl mb-3 self-end font-medium" disabled>Enviar Email</button>
         </section>
 
         <hr />

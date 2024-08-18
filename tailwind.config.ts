@@ -14,6 +14,15 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
           "card":"./app/public/img/devcard_desktop.png"
       },
+      keyframes: {
+        carrossel: {
+          '0%' :{right: '0%'},
+          '100%' :{right: '100%'}
+        }
+      },
+      animation: {
+        carrossel: 'carrossel 30s linear infinite',
+      }
     },
   },
   plugins: [],
