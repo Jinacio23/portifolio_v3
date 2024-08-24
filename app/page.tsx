@@ -6,6 +6,8 @@ import LinkedinImg from "../public/icon/linkedin.svg"
 import InstagramImg from "../public/icon/instagram.svg"
 import whatsapp from "../public/icon/whatsapp.svg"
 
+import { useState } from "react";
+
 import ProjectCard from "./components/ProjectCard";
 import CarrosselTechs from "./components/CarrosselTechs";
 import FooterLinks from "./components/FooterLinks";
@@ -18,11 +20,13 @@ import Button from "./components/Button";
 
 export default function Home() {
 
+  const [show, setShow] = useState('hidden')
+
   function showMenu() {
-
     document.getElementById('nav')?.classList.toggle('hidden')
-
   }
+
+  let popUp = () => show == 'hidden' ? setShow('') : setShow('hidden')
 
   return (
     <>
@@ -165,7 +169,12 @@ export default function Home() {
 
         <hr />
         <div className="flex justify-between items-center">
-          <button className="bg-[#393994] text-xs p-2 w-28 rounded-xl mb-3 font-medium mt-3" disabled>Meu Currículo</button>
+          <Button 
+          title={"Meu Currículo"}
+          func={popUp}
+          className="bg-[#393994] text-xs p-2 w-28 rounded-xl mb-3 font-medium mt-3"
+          />
+          {/* <button className="bg-[#393994] text-xs p-2 w-28 rounded-xl mb-3 font-medium mt-3" disabled>Meu Currículo</button> OLD button*/}
           <div>
             <FooterLinks />
           </div>
@@ -175,7 +184,12 @@ export default function Home() {
       </footer>
 
       <SendEmail />
-      <LoadCV />
+
+      <LoadCV 
+      hide={show}
+      fhide={setShow}
+      />
+      
     </>
   );
 }

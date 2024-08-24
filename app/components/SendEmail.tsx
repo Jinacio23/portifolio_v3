@@ -1,6 +1,8 @@
+
 export default function SendEmail() {
+
     return (
-        <form action={'#'} method="POST" className="fixed top-0 bottom-0 left-0 right-0 m-auto bg-[#5a5ab2] flex flex-col p-3 rounded-xl w-64 max-h-80 shadow-black/40 hidden" >
+        <form action={'#'} method="POST" className={`fixed top-0 bottom-0 left-0 right-0 m-auto bg-[#5a5ab2] flex flex-col p-3 rounded-xl w-64 max-h-80 shadow-black/40 hidden`} >
             <label htmlFor="name" className="">Nome</label>
             <input type="text" id="name" name="name" placeholder="Seu nome..."  className="bg-[#23232e] mb-5 rounded p-1.5"/>
             <label htmlFor="email">Email</label>
