@@ -6,7 +6,7 @@ import LinkedinImg from "../public/icon/linkedin.svg"
 import InstagramImg from "../public/icon/instagram.svg"
 import whatsapp from "../public/icon/whatsapp.svg"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import ProjectCard from "./components/ProjectCard";
 import CarrosselTechs from "./components/CarrosselTechs";
@@ -19,8 +19,16 @@ import Button from "./components/Button";
 
 
 export default function Home() {
+  
 
   const [show, setShow] = useState('hidden')
+
+  
+  useEffect(
+    function span(){
+      alert("Design desktop em desenvolvimento...");
+    }
+    ,[])
 
   function showMenu() {
     document.getElementById('nav')?.classList.toggle('hidden')
@@ -68,7 +76,7 @@ export default function Home() {
           <div className="conteiner flex flex-col  items-center gap-2">
             <p className="font-light">Olá, me chamo</p>
             <p className="text-3xl">José Inácio</p>
-            <p>Desenvolvedor web e Freelancer</p>
+            <p>Desenvolvedor web</p>
           </div>
 
           <div className="utils flex gap-6">
@@ -109,8 +117,8 @@ export default function Home() {
 
         <section id="projetos" className="flex flex-col items center mb-10">
           <h2 className="text-2xl mb-6 text-center">Projetos</h2>
-          <ProjectCard img="wordle" title="Projeto 1" description="Lorem por enquanto" icons={["html", "css", "js"]} size={20} />
-          <ProjectCard img="wordle" title="Projeto 1" description="Lorem por enquanto" icons={["html", "css", "js"]} size={20} inverse={true} />
+          <ProjectCard img="LandingPage" title="Landing Page" description="Primeira landing page que fiz com o objetivo de entender melhor como funciona a criação de sites e adaptação com dispositivos mobile. Por enquanto disponível apenas para desktop." icons={["html", "css", "js"]} size={20} link="https://jinacio23.github.io/Landing_Page/" repositorio="https://github.com/Jinacio23/Landing_Page"/>
+          <ProjectCard img="wordle" title="Clone Wordle" description="Participando de um desafio do 7DaysOFCode, da alura, pude ser orientado e consegui desenvolver bastante minhas habilidades em javascript, deu trabalho, mas fico satisfeito com o resultado que cheguei!" icons={["html", "css", "js"]} size={20} inverse={true} link="https://jinacio23.github.io/Clone_Wordle/" repositorio="https://github.com/Jinacio23/Clone_Wordle"/>
 
         </section>
 
@@ -189,7 +197,6 @@ export default function Home() {
       hide={show}
       fhide={setShow}
       />
-      
     </>
   );
 }

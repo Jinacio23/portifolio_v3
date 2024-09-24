@@ -14,8 +14,8 @@ export default function LoadCV({ hide, fhide }: Props) {
             <div className="flex justify-between items-center">
                 <button onClick={popUp} className="bg-[#23232e] text-xs p-2 px-5 rounded-lg">Voltar</button>
                 <div className="flex items-center gap-2">
-                    <a href="/docs/joseInacio.pdf" target="_blank" className="bg-[#23232e] text-xs p-2 px-5 rounded-lg">Apenas vizualizar</a>
-                    <a href="/docs/joseInacio.pdf" className="bg-[#23232e] text-xs p-2 px-5 rounded-lg" download>Sim</a>
+                    <a href="/docs/CV_JoseInacio.pdf" target="_blank" className="bg-[#23232e] text-xs p-2 px-5 rounded-lg">Apenas vizualizar</a>
+                    <a href="/docs/CV_JoseInacio.pdf" className="bg-[#23232e] text-xs p-2 px-5 rounded-lg" download>Sim</a>
                 </div>
             </div>
         </div>
